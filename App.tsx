@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import {View ,Text} from "react-native";
+import { Provider } from 'react-redux';
+import { ThemeProvider } from '@shopify/restyle';
+import { AppScreenNavigation } from "./src/Navigation"
+import { LoadAssets } from './src/components';
+import { theme } from './src/components';
+import {store} from "./src/state/store";
+import { assets  } from "./src/Components/Assets";
+
+const fonts = {
+  "SFUIText-Bold": require("./assets/fonts/SFUIText-Bold.ttf"),
+  "SFUIText-BoldItalic": require("./assets/fonts/SFUIText-BoldItalic.ttf"),
+  "SFUIText-Heavy": require("./assets/fonts/SFUIText-Heavy.ttf"),
+  "SFUIText-HeavyItalic": require("./assets/fonts/SFUIText-HeavyItalic.ttf"),
+  "SFUIText-Light": require("./assets/fonts/SFUIText-Light.ttf"),
+  "SFUIText-LightItalic": require("./assets/fonts/SFUIText-LightItalic.ttf"),
+  "SFUIText-Medium": require("./assets/fonts/SFUIText-Medium.ttf"),
+  "SFUIText-MediumItalic": require("./assets/fonts/SFUIText-MediumItalic.ttf"),
+  "SFUIText-Regular": require("./assets/fonts/SFUIText-Regular.ttf"),
+  "SFUIText-RegularItalic": require("./assets/fonts/SFUIText-RegularItalic.ttf"),
+  "SFUIText-Semibold": require("./assets/fonts/SFUIText-Semibold.ttf"),
+  "SFUIText-SemiboldItalic": require("./assets/fonts/SFUIText-SemiboldItalic.ttf"),
+};
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider {...{ store }}>
+      <ThemeProvider {...{ theme }}>
+        <LoadAssets assets={assets} fonts={fonts}>
+          <View>
+            <Text>asd</Text>
+          </View>
+        </LoadAssets>
+      </ThemeProvider>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
