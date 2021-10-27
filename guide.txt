@@ -1,0 +1,2 @@
+get-executionpolicy
+set-executionpolicy remotesigned

@@ -1,1 +1,0 @@
-export { default as StaticAniamtion } from "./StaticAniamtion";

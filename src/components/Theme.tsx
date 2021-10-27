@@ -133,7 +133,7 @@ const theme = createTheme({
       color: "mainBackground"
     },
     subWelcome: {
-      fontFamily: 'SFUIText-RegularItalic',
+      fontFamily: 'SFUIText-Light',
       fontWeight: '600',
       fontSize: 16,
       lineHeight: 18,
