@@ -3,11 +3,9 @@ import * as React from 'react';
 import {View ,Text} from "react-native";
 import { Provider } from 'react-redux';
 import { ThemeProvider } from '@shopify/restyle';
-import { AppScreenNavigation } from "./src/Navigation"
 import { LoadAssets } from './src/components';
 import { theme } from './src/components';
 import {store} from "./src/state/store";
-import { assets  } from "./src/Components/Assets";
 
 const fonts = {
   "SFUIText-Bold": require("./assets/fonts/SFUIText-Bold.ttf"),
@@ -29,7 +27,7 @@ export default function App() {
   return (
     <Provider {...{ store }}>
       <ThemeProvider {...{ theme }}>
-        <LoadAssets assets={assets} fonts={fonts}>
+        <LoadAssets  fonts={fonts}>
           <View>
             <Text>asd</Text>
           </View>

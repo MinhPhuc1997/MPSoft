@@ -8,7 +8,7 @@ const initState={
     loading:true,
 }
  
-const LoginReduces =(state=initState,action:ActionLogin)=>{
+const LoginReducers =(state=initState,action:ActionLogin)=>{
     switch (action.type) {
         case LoginType.NORMAL_LOGIN :
             return {
@@ -40,4 +40,4 @@ const LoginReduces =(state=initState,action:ActionLogin)=>{
     };
 }
 
-export default LoginReduces;
+export default LoginReducers;
