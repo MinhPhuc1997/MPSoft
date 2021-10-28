@@ -1,17 +1,26 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Text} from "react-native";
 import { Provider } from 'react-redux';
 import { ThemeProvider } from '@shopify/restyle';
-import LoadAssets from './src/components/LoadAssets';
+import { LoginScreen } from "./src/navigation"
+import { LoadAssets } from './src/components';
 import { theme } from './src/components';
-import { store } from "./src/state/store";
-import { LoginScreen } from './src/navigation';
-
+import {store} from "./src/state/store";
+import { assets  } from "./src/components/Assets";
 
 const fonts = {
-  "Roboto-Black": require("./assets/fonts/Roboto-Black.ttf"),
-
+  "SFUIText-Bold": require("./assets/fonts/SFUIText-Bold.ttf"),
+  "SFUIText-BoldItalic": require("./assets/fonts/SFUIText-BoldItalic.ttf"),
+  "SFUIText-Heavy": require("./assets/fonts/SFUIText-Heavy.ttf"),
+  "SFUIText-HeavyItalic": require("./assets/fonts/SFUIText-HeavyItalic.ttf"),
+  "SFUIText-Light": require("./assets/fonts/SFUIText-Light.ttf"),
+  "SFUIText-LightItalic": require("./assets/fonts/SFUIText-LightItalic.ttf"),
+  "SFUIText-Medium": require("./assets/fonts/SFUIText-Medium.ttf"),
+  "SFUIText-MediumItalic": require("./assets/fonts/SFUIText-MediumItalic.ttf"),
+  "SFUIText-Regular": require("./assets/fonts/SFUIText-Regular.ttf"),
+  "SFUIText-RegularItalic": require("./assets/fonts/SFUIText-RegularItalic.ttf"),
+  "SFUIText-Semibold": require("./assets/fonts/SFUIText-Semibold.ttf"),
+  "SFUIText-SemiboldItalic": require("./assets/fonts/SFUIText-SemiboldItalic.ttf"),
 };
 
 export default function App() {
@@ -19,10 +28,13 @@ export default function App() {
   return (
     <Provider {...{ store }}>
       <ThemeProvider {...{ theme }}>
-        <LoadAssets fonts={fonts}>
-        <Text style={{fontFamily:"Roboto-Black"}}>Welcome</Text>
+        <LoadAssets assets={assets} fonts={fonts}>
+          <LoginScreen />
         </LoadAssets>
       </ThemeProvider>
     </Provider>
   );
 }
+
+
+

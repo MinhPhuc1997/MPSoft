@@ -16,7 +16,6 @@ const CheckRemember = ({ checked, onChange }: CheckRememberProps) => {
                 alignItems="center"
                 alignSelf="flex-start"
                 padding="xs"
-                marginTop="m"
             >
                 <Box
                     width={16}

@@ -74,71 +74,37 @@ const theme = createTheme({
   },
 
   textVariants: {
-    text18_70: {
-      fontFamily: 'SFUIText-Semibold',
-      fontWeight: '600',
-      fontSize: 18,
-      lineHeight: 20,
-      color: "black",
-      opacity: 0.8
-    },
-    text36_100_black: {
-      fontFamily: 'SFUIText-Bold',
-      fontWeight: '600',
-      fontSize: 36,
-      lineHeight: 36,
-      color: "black",
-    },
-    text36_100_blue: {
-      fontFamily: 'SFUIText-Bold',
-      fontWeight: '600',
-      fontSize: 36,
-      lineHeight: 36,
-      color: "blueMain",
-    },
-    boxtitle: {
-      fontFamily: 'SFUIText-Bold',
-      fontWeight: '600',
-      fontSize: 16,
-      lineHeight: 20,
-      color: "black",
-    },
-    boxsubtitle: {
-      fontFamily: 'SFUIText-LightItalic',
-      fontWeight: '600',
-      fontSize: 12,
-      lineHeight: 16,
-      color: "black",
-    },
-    boxsubtitleLight:{
-      fontFamily: 'SFUIText-Light',
-      fontWeight: '600',
-      fontSize: 12,
-      lineHeight: 16,
-      color: "black",
-    },
-    tltleInScreen: {
-      fontFamily: 'SFUIText-Semibold',
-      fontWeight: '900',
-      fontSize: 18,
-      lineHeight: 22,
-      color: "black",
-      opacity: 0.7
-    },
-    welcome: {
+    
+    login_welcome: {
       fontFamily: 'SFUIText-Semibold',
       fontWeight: '600',
       fontSize: 36,
       lineHeight: 36,
       color: "mainBackground"
     },
-    subWelcome: {
-      fontFamily: 'SFUIText-Light',
-      fontWeight: '600',
-      fontSize: 16,
+    login_subWelcome: {
+      fontFamily: 'SFUIText-RegularItalic',
+      fontWeight: '400',
+      fontSize: 14,
       lineHeight: 18,
       color: "mainBackground"
     },
+    title_input:{
+      fontFamily: 'SFUIText-Semibold',
+      fontWeight: '400',
+      fontSize: 16,
+      lineHeight: 18,
+      color: "den",
+    },
+    login_italic:{
+      fontFamily: 'SFUIText-RegularItalic',
+      fontWeight: '400',
+      fontSize: 13,
+      lineHeight: 14,
+      color: "den"
+    },
+
+    
     titlesmall: {
       fontFamily: 'SFUIText-Semibold',
       fontWeight: '600',

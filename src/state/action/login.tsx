@@ -1,7 +1,7 @@
 import {LoginType} from "../action-type"
 interface NORMAL_LOGIN{
     type:LoginType.NORMAL_LOGIN,
-    payload:string
+    payload:object
 }
 interface ON_ERROR{
     type:LoginType.ON_ERROR,

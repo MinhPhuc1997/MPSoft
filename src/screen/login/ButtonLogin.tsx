@@ -5,23 +5,22 @@ import { Text, Box } from "../../components"
 import { TouchableOpacity } from "react-native";
 
 interface ButtonLoginProps {
-    width: number;
+   
     onPress:()=>void;
 }
-const ButtonLogin = ({ width,onPress }: ButtonLoginProps) => {
+const ButtonLogin = ({ onPress }: ButtonLoginProps) => {
     return (
         <TouchableOpacity
         {...{onPress}}
-        
+       
         >
             <LinearGradient
                 start={[0, 1]}
                 end={[1, 0]}
                 colors={['#9599E2', '#8BC6EC']}
                 style={{
-                    width: width,
                     height: 50,
-                    borderRadius: 3,
+                    borderRadius: 24,
                     justifyContent: "center",
                     alignItems: "center",
                     flexDirection: "row",
